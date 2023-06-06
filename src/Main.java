@@ -3,13 +3,16 @@ import java.time.LocalDate;
 public class Main {
 
     public static void main(String[] args) {
+
         checkYearIsLeap(2023);
 
-        recommendVersion( int clientOs = 2;
-        int clientYear = 2023);
+        int clientOs = 1;
+        int clientYear = 2023;
+        recommendVersion(clientOs, clientYear );
 
-        int deliveryDays = calculateDeliveryDays( int distance = 55);
-        System.out.println("Время дставки " + deliveryDays);
+        int distance = 55;
+        int deliveryDays = calculateDeliveryDays(distance);
+        System.out.println("Время дставки " + deliveryDays + " дня.");
 
     }
 
@@ -21,8 +24,9 @@ public class Main {
         }
     }
 
-    public static void recommendVersion(int clientOs, int clientYear) {
+    public static void recommendVersion(int clientOs , int clientYear) {
         int currentYear = LocalDate.now().getYear();
+
         int iOS = 0;
         int android = 1;
 
@@ -37,12 +41,12 @@ public class Main {
                 System.out.println("Установите обычную версию  для Android");
             } else {
                 System.out.println("Установите облегченную версию  для Android");
-            } else{
+            }
+        } else {
                 System.out.println("Извините, ОС не поддерживается");
             }
         }
 
-    }
 
     public static int calculateDeliveryDays(int distance) {
 
@@ -51,9 +55,9 @@ public class Main {
 
         if (distance <= 20) {
             deliveryDays = days + 1;
-        } else if (distance <= 60) ; {
+        } else if (distance <= 60) {
             deliveryDays = days + 2;
-        } else if (distance <= 100) ; {
+        } else if (distance <= 100) {
             deliveryDays = days + 3;
         }
         return deliveryDays;
